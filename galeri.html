@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Film</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header><h1>Galeri Poster Film</h1></header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="film.html">Daftar Film</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="content">
+  <h2>🎞️ Galeri Poster Film</h2>
+  <div class="gallery">
+    <img src="img/hq720.jpg" alt="Film 1" onclick="showDetail('BLOCK STRIKE', 'Genre: Action<br>Durasi: 1h 40m<br>Rilis: 2025')">
+    <img src="img/953570490.jpg" alt="Film 2" onclick="showDetail('LOVE REVOLUTION', 'Genre: Romance Comedy<br>Durasi: 20m<br>Rilis: 2020')">
+    <img src="img/rush-hour-3.jpg" alt="Film 3" onclick="showDetail('RUSH HOUR 3', 'Genre: Action Comedy<br>Durasi: 2h 18m<br>Rilis: 2007')">
+  </div>
+</section>
+
+<!-- Modal Pop-up -->
+<div id="filmModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="filmTitle"></h3>
+    <p id="filmDescription"></p>
+  </div>
+</div>
+
+<script>
+  function showDetail(title, desc) {
+    document.getElementById('filmTitle').innerHTML = title;
+    document.getElementById('filmDescription').innerHTML = desc;
+    document.getElementById('filmModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('filmModal').style.display = 'none';
+  }
+</script>
+
+    <aside class="widget">
+      <h3>Tips Film</h3>
+      <p>Pilih film dengan rating IMDb tinggi untuk pengalaman terbaik!</p>
+    </aside>
+  </main>
+  <footer><p>&copy; 2025 ABSOLUTE CINEMA FILM</p></footer>
+</body>
+</html>
